@@ -43,9 +43,9 @@ jobs:
           fi
       - name: Download & install shiroa
         run: |
-          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.5/typst-book-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
-          chmod +x typst-book-x86_64-unknown-linux-gnu/bin/typst-book
-          sudo cp typst-book-x86_64-unknown-linux-gnu/bin/typst-book /usr/bin/shiroa
+          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.2.0-nightly5/shiroa-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
+          chmod +x shiroa-x86_64-unknown-linux-gnu/bin/shiroa
+          sudo cp shiroa-x86_64-unknown-linux-gnu/bin/shiroa /usr/bin/shiroa
       - name: Build Book
         run: |
           shiroa build src
