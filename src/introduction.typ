@@ -3,6 +3,6 @@
 #show: book-page.with(title: "Introduction")
 
 
-= Introduction
+= 介绍
 
-This is Kewuaa's personal blog page.
+Kewuaa 的个人博客。

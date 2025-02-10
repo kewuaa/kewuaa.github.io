@@ -20,14 +20,13 @@
 
 // Fonts
 #let main-font = (
-  "Charter",
-  "Source Han Serif SC",
+  "Noto Sans CJK HK",
   // "Source Han Serif TC",
   // shiroa's embedded font
   "Libertinus Serif",
 )
 #let code-font = (
-  "BlexMono Nerd Font Mono",
+  "FiraCode Nerd Font Mono",
   // shiroa's embedded font
   "DejaVu Sans Mono",
 )
@@ -143,6 +142,12 @@
 
   // Main body.
   set par(justify: true)
+
+  // fix chinese characters
+  show regex("[\p{sc=Hani} 。 ； ， ： “ ”（ ） 、 ？ 《 》] [\p{sc=Hani} 。 ； ， ： “ ”（ ） 、 ？ 《 》]"): it => {
+    let (a, _, b) = it.text.clusters()
+    a + b
+  }
 
   body
 }
