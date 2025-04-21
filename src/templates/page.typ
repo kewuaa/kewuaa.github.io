@@ -35,9 +35,8 @@
 
 // Fonts
 #let main-font = (
-  "Charter",
-  "Source Han Serif SC",
-  // "Source Han Serif TC",
+  "Noto Sans CJK HK",
+  "FangSong",
   // shiroa's embedded font
   "Libertinus Serif",
 )
