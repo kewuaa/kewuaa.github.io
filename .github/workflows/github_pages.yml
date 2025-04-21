@@ -43,12 +43,10 @@ jobs:
           fi
       - name: Download & install shiroa
         run: |
-          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.2.0-nightly5/shiroa-x86_64-unknown-linux-gnu.tar.gz | tar -xvz
-          chmod +x shiroa-x86_64-unknown-linux-gnu/bin/shiroa
-          sudo cp shiroa-x86_64-unknown-linux-gnu/bin/shiroa /usr/bin/shiroa
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.3.0/shiroa-installer.sh | sh
       - name: Build Book
         run: |
-          shiroa build src
+          ~/.local/bin/shiroa build src
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
